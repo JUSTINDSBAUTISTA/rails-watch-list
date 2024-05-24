@@ -1,0 +1,7 @@
+<h2>Lists: </h2>
+<ol>
+  <% @lists.each do |list| %>
+    <li><%= list.name %> <%= link_to "Delete",
+      list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> </li>
+  <% end %>
+</ol>
