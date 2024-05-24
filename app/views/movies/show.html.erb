@@ -1,4 +1,11 @@
-<%= @movie.title %>
-<%= @movie.overview %>
-<%= @movie.poster_url %>
-<%= @movie.rating %>
+<div class="card-trip">
+  <img src="<%= @movie.poster_url %>" />
+  <div class="card-trip-infos">
+    <div>
+      <h2>Title: <%= @movie.title %></h2>
+      <p>Overview: <%= @movie.overview %></p>
+    </div>
+    <h2 class="card-trip-pricing">Ratings: <%= @movie.rating %></h2>
+    <img src="https://scontent.fyhu2-1.fna.fbcdn.net/v/t39.30808-6/332733955_615961407016713_2349876834974782527_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=EsbD3g18txoQ7kNvgHXcvFk&_nc_ht=scontent.fyhu2-1.fna&oh=00_AYBEJFul4E56Ms-7k18_tbOu-LzMpujit5PZv1cf91pnJg&oe=6656056C" class="card-trip-user avatar-bordered" />
+  </div>
+</div>

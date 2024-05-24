@@ -1,15 +1,14 @@
 
+
 <div class="container">
-  <h2>Movies: </h2>
-    <% @movies.each do |movie| %>
-    <div class="card-product">
-      <img src="<%= movie.poster_url %>"/>
-      <div class="card-product-infos">
-        <h2>Title: <%= movie.title%></h2>
-        <p><strong>Overview: </strong><%= movie.overview %></p>
-        <p><strong>Rating: </strong><%= movie.rating %></p>
-        <p><%= link_to "Delete", movie_path(movie), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete?"} %></p>
+  <h1>Movies: </h1>
+
+      <div class="cards">
+        <% @movies.each do |movie| %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= movie.poster_url%>)">
+            <%= movie.title %>
+          </div>
+        <% end %>
       </div>
-    </div>
-    <% end %>
+
 </div>
