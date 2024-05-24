@@ -1,13 +1,15 @@
 
 
 <div class="container">
-  <h1>Movies: </h1>
+  <%= link_to new_movie_path do %><button class="btn btn-success"> Add Movie </button> <% end %>
 
       <div class="cards">
         <% @movies.each do |movie| %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= movie.poster_url%>)">
-            <%= movie.title %>
-          </div>
+          <%= link_to movie_path(movie) do  %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= movie.poster_url%>)">
+
+            </div>
+          <% end %>
         <% end %>
       </div>
 

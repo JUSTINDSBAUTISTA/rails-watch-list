@@ -1,11 +1,31 @@
-<%= form_with model: @movie do |m| %>
-  <%= m.label :title %>
-  <%= m.text_field :title %>
-  <%= m.label :overview %>
-  <%= m.text_field :overview %>
-  <%= m.label :poster_url %>
-  <%= m.text_field :poster_url %>
-  <%= m.label :rating %>
-  <%= m.text_field :rating %>
-  <%= m.submit %>
-<% end %>
+
+
+<div class="container" style ="margin-top: 25px;">
+  <%= form_with model: @movie do |m| %>
+    <div class="row mb-3">
+      <%= m.label :title, class: 'col-sm-2 col-form-label'%>
+      <div class="col-sm-10">
+        <%= m.text_field :title, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <%= m.label :overview, class: 'col-sm-2 col-form-label'%>
+      <div class="col-sm-10">
+        <%= m.text_field :overview, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <%= m.label :poster_url, class: 'col-sm-2 col-form-label'%>
+      <div class="col-sm-10">
+        <%= m.text_field :poster_url, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <%= m.label :rating, class: 'col-sm-2 col-form-label'%>
+      <div class="col-sm-10">
+        <%= m.text_field :rating, class: 'form-control' %>
+      </div>
+    </div>
+    <%= m.submit class: 'btn btn-success'%>
+  <% end %>
+</div>
